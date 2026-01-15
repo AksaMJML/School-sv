@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/School_db
+    username: root
+    password: 741897
+
+  Jpa:
+    hibernate:
+      ddl-auto: create

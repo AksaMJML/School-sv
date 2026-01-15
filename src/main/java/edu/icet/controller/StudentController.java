@@ -11,13 +11,5 @@ public class StudentController {
     @Autowired
    StudentService studentService;
 
-    @GetMapping("/get-name")
-    public String getName(){
-        return studentService.getName();
-    }
 
-    @GetMapping("/get-version")
-    public String getVersion(){
-        return studentService.getVersion();
-    }
 }
