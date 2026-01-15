@@ -1,8 +1,7 @@
 package edu.icet.service;
 
-public class StudentService {
+public interface StudentService {
 
-    public String getName(){
-        return "Aksa";
-    }
+    String getVersion();
+    String getName();
 }
