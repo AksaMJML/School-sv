@@ -1,7 +1,7 @@
 package edu.icet.service.impl;
 
 import edu.icet.dto.StudentDTO;
-import edu.icet.dto.StudentEntity;
+import edu.icet.entity.StudentEntity;
 import edu.icet.repositery.StudentRepositery;
 import edu.icet.service.StudentService;
 import org.modelmapper.ModelMapper;

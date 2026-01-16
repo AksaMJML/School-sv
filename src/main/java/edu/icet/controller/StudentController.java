@@ -2,6 +2,7 @@ package edu.icet.controller;
 
 import edu.icet.dto.StudentDTO;
 import edu.icet.service.StudentService;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
+@RequiredArgsConstructor
 public class StudentController {
 
     StudentService service;
@@ -37,6 +39,6 @@ public class StudentController {
 
     @GetMapping("get-all")
     public List<StudentDTO> getAll(){
-        return  service.getAll();
+        return service.getAll();
     }
 }
