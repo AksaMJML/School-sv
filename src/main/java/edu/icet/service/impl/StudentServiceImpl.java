@@ -12,13 +12,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+//@RequiredArgsConstructor
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
     StudentRepositery studentRepositery;
 
     @Autowired
-    ModelMapper mapper;
+    ModelMapper mapper = new ModelMapper();
+
+    public StudentServiceImpl() {
+        this.studentRepositery = studentRepositery;
+    }
 
     @Override
     public void addStudent(StudentDTO studentDTO) {

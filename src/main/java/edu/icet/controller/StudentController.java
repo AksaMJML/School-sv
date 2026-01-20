@@ -2,24 +2,24 @@ package edu.icet.controller;
 
 import edu.icet.dto.StudentDTO;
 import edu.icet.service.StudentService;
+import edu.icet.service.impl.StudentServiceImpl;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/student")
-@RequiredArgsConstructor
+@RequestMapping
+//@RequiredArgsConstructor
 public class StudentController {
 
+    @Autowired
     StudentService service;
 
     @PostMapping ("/add")
     public void addStudent(@RequestBody StudentDTO studentDTO){
         service.addStudent(studentDTO);
+
     }
 
     @PutMapping("/update")
